@@ -1,1 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Налоги на криптовалюту в России 2026: что нужно знать</title>
+    <meta name="description" content="Полное руководство по налогам на криптовалюту в России в 2026 году. Когда платить, сколько, как отчитываться и как законно не платить.">
+    <meta name="keywords" content="налоги на криптовалюту, налог на биткоин, 3-НДФЛ крипта, налоги в России 2026, криптовалюта и ФНС">
+    <meta name="author" content="CryptoGuide">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Yandex.Metrika counter (ваш существующий) -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108610444','ym');
+        ym(108610444,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/108610444" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #cfe7f5 0%, #7bb3d4 40%, #2c5a7a 100%);
+            background-attachment: fixed;
+            color: #111827;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+        
+        /* Шапка */
+        .header {
+            background: linear-gradient(135deg, #d4f1e3 0%, #cfe7f5 50%, #2c5a7a 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #000000; text-decoration: none; }
+        .logo i { color: #000000; }
+        .nav a {
+            color: #000000;
+            font-weight: 500;
+            margin-left: 28px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .nav a:hover { color: #8B0000; border-bottom: 2px solid #8B0000; padding-bottom: 4px; }
+        
+        /* Контентная карточка */
+        .content-card {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(2px);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(139,0,0,0.2);
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.1);
+        }
+        
+        /* Заголовки */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            border-left: 4px solid #8B0000;
+            padding-left: 18px;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 1.8rem 0 1rem;
+            color: #8B0000;
+            border-left: 4px solid #8B0000;
+            padding-left: 14px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem;
+            color: #8B0000;
+        }
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1rem 0 0.5rem;
+            color: #8B0000;
+        }
+        
+        /* Текст */
+        p { margin-bottom: 1rem; line-height: 1.6; }
+        
+        /* Таблицы */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 1rem;
+            border: 1px solid rgba(139,0,0,0.2);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #f0eef2;
+        }
+        th {
+            background: rgba(139, 0, 0, 0.1);
+            color: #8B0000;
+            font-weight: 700;
+        }
+        
+        /* Акцентные блоки */
+        .highlight-box {
+            background: rgba(139, 0, 0, 0.05);
+            border-left: 4px solid #8B0000;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        .success-box {
+            background: rgba(34, 139, 34, 0.08);
+            border-left: 4px solid #228B22;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        .warning-box {
+            background: rgba(255, 140, 0, 0.08);
+            border-left: 4px solid #FF8C00;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        
+        /* Список */
+        ul, ol { margin: 0.8rem 0 1rem 1.8rem; }
+        li { margin-bottom: 0.3rem; }
+        
+        /* Кнопка наверх */
+        .go-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #8B0000;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 99;
+        }
+        .go-top.show { opacity: 1; visibility: visible; }
+        .go-top:hover { background: #A52A2A; transform: translateY(-3px); }
+        
+        /* Футер */
+        .footer {
+            background: rgba(44, 90, 122, 0.95);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-top: 2px solid #8B0000;
+            color: white;
+            font-size: 0.8rem;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a { color: #FFD0D0; text-decoration: none; }
+        
+        @media (max-width: 700px) {
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.3rem; }
+            .content-card { padding: 1.2rem; }
+            .nav a { margin-left: 12px; font-size: 0.75rem; }
+        }
+        .text-burgundy { color: #8B0000; font-weight: 600; }
+    </style>
+</head>
+<body>
 
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo"><i class="fab fa-bitcoin"></i> CRYPTO<span style="color:#8B0000;">GUIDE</span> 2026</a>
+        <div class="nav">
+            <a href="index.html">Главная</a>
+            <a href="index.html#methods">Способы</a>
+            <a href="index.html#storage">Хранение</a>
+            <a href="index.html#faq">FAQ</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="content-card">
+        <h1>Налоги на криптовалюту в России 2026: что нужно знать, чтобы спать спокойно</h1>
+        
+        <div class="highlight-box">
+            <i class="fas fa-gavel"></i> <strong>В 2026 году в России действуют чёткие правила.</strong> Игнорировать их — значит рисковать не только деньгами, но и свободой.
+        </div>
+        
+        <p>Вы купили биткоин. Или USDT. Или может быть, только планируете. И тут возникает вопрос, от которого многие новички стараются отмахнуться: <strong>«А нужно ли платить налоги с криптовалюты?»</strong></p>
+        
+        <p>Я сам через это проходил. Кажется, что крипта — это что-то «не от мира сего», виртуальное, а значит, и налоги платить не надо. Но это опасное заблуждение.</p>
+        
+        <p>В этой статье я расскажу простыми словами:</p>
+        <ul>
+            <li>Когда возникает налог на криптовалюту</li>
+            <li>Сколько придётся заплатить</li>
+            <li>Как правильно отчитаться перед государством</li>
+            <li>Какие схемы законны, а какие — нет</li>
+            <li>Что будет, если ничего не платить</li>
+        </ul>
+        
+        <p>Прочитайте до конца — и вы будете знать о налогах больше, чем 95% держателей крипты в России.</p>
+        
+        <!-- 1 -->
+        <h2>1. Криптовалюта — это имущество. Официально.</h2>
+        <p>С 2021 года в России действует закон, который признаёт криптовалюту <strong>имуществом</strong>. Это ключевой момент.</p>
+        <p>Когда вы покупаете биткоин за рубли — это <strong>приобретение имущества</strong>. Никакого налога здесь нет. Вы просто обменяли рубли на цифровой актив.</p>
+        <p><strong>Но!</strong> Как только вы:</p>
+        <ul>
+            <li>Продаёте криптовалюту за рубли</li>
+            <li>Обмениваете одну криптовалюту на другую (например, USDT → BTC)</li>
+            <li>Используете крипту для оплаты товаров или услуг</li>
+        </ul>
+        <p>…возникает <strong>объект налогообложения</strong>.</p>
+        
+        <!-- 2 -->
+        <h2>2. Когда возникает налог? Простые примеры</h2>
+        
+        <div class="success-box">
+            <i class="fas fa-check-circle"></i> <strong>Пример 1. Вы купили и держите</strong><br>
+            Вы купили 0,1 BTC за 500 000 ₽ в январе 2026 года. Курс вырос. Вы продолжаете держать биткоин на кошельке.<br>
+            <strong>Налог?</strong> ❌ Нет. Пока вы не продали — налога нет.
+        </div>
+        
+        <div class="warning-box">
+            <i class="fas fa-exclamation-triangle"></i> <strong>Пример 2. Вы продали дороже, чем купили (одна покупка)</strong><br>
+            Вы купили 0,1 BTC за 500 000 ₽. Продали за 700 000 ₽.<br>
+            <strong>Доход:</strong> 200 000 ₽<br>
+            <strong>Налог 13%:</strong> 26 000 ₽<br>
+            ✅ Налог нужно заплатить.
+        </div>
+        
+        <div class="highlight-box">
+            <i class="fas fa-calculator"></i> <strong>Пример 3. Вы продали дешевле, чем купили</strong><br>
+            Купили 0,1 BTC за 500 000 ₽. Продали за 400 000 ₽.<br>
+            <strong>Доход:</strong> 0 ₽ (убыток)<br>
+            <strong>Налог:</strong> 0 ₽<br>
+            Но <strong>декларацию подать всё равно нужно</strong>, чтобы государство знало: вы ничего не заработали.
+        </div>
+        
+        <h3>Пример 4. Вы покупали по частям, а продали часть (средняя цена)</h3>
+        <p>Представьте, что вы покупали биткоин в разное время:</p>
+        <div class="table-wrapper">
+            <table>
+                <thead><tr><th>Дата</th><th>Сумма (₽)</th><th>Курс BTC</th><th>Куплено BTC</th></tr></thead>
+                <tbody>
+                    <tr><td>10.01.2026</td><td>200 000 ₽</td><td>4 000 000 ₽</td><td>0,05 BTC</td></tr>
+                    <tr><td>15.03.2026</td><td>150 000 ₽</td><td>5 000 000 ₽</td><td>0,03 BTC</td></tr>
+                    <tr><td><strong>Итого</strong></td><td><strong>350 000 ₽</strong></td><td>—</td><td><strong>0,08 BTC</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p>Вы продали <strong>0,05 BTC</strong> по курсу <strong>6 000 000 ₽</strong> за 1 BTC.</p>
+        <ul>
+            <li><strong>Выручка:</strong> 0,05 × 6 000 000 ₽ = 300 000 ₽</li>
+            <li><strong>Средняя цена покупки 1 BTC:</strong> 350 000 ₽ ÷ 0,08 BTC = 4 375 000 ₽</li>
+            <li><strong>Себестоимость проданных 0,05 BTC:</strong> 0,05 × 4 375 000 ₽ = 218 750 ₽</li>
+            <li><strong>Доход:</strong> 300 000 ₽ − 218 750 ₽ = 81 250 ₽</li>
+            <li><strong>Налог 13%:</strong> 81 250 ₽ × 13% = 10 563 ₽</li>
+        </ul>
+        <p>✅ Налог нужно заплатить.</p>
+        
+        <div class="highlight-box">
+            <i class="fas fa-exchange-alt"></i> <strong>Пример 5. Вы обменяли USDT на BTC</strong><br>
+            Купили USDT за 1 000 000 ₽. Обменяли на BTC, когда курс вырос. С точки зрения налогов — это <strong>продажа USDT</strong> и <strong>покупка BTC</strong>. Если USDT вырос в рублях — возникает налог.
+        </div>
+        
+        <!-- 3 -->
+        <h2>3. Сколько платить? Ставки налога в 2026 году</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead><tr><th>Сумма дохода за год</th><th>Ставка НДФЛ</th></tr></thead>
+                <tbody>
+                    <tr><td>До 2 400 000 ₽</td><td><strong>13%</strong></td></tr>
+                    <tr><td>Свыше 2 400 000 ₽</td><td><strong>15%</strong> (с суммы превышения)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p><strong>Важно:</strong> Это <strong>прогрессивная шкала</strong>. Если вы заработали 3 000 000 ₽, то:</p>
+        <ul>
+            <li>2 400 000 ₽ облагаются по ставке 13% = 312 000 ₽</li>
+            <li>600 000 ₽ облагаются по ставке 15% = 90 000 ₽</li>
+            <li><strong>Итого налог:</strong> 402 000 ₽</li>
+        </ul>
+        <p><strong>Что считается доходом?</strong> Доход = Цена продажи − Цена покупки. Если покупали частями — используйте <strong>метод средней себестоимости</strong> (как в примере 4).</p>
+        
+        <!-- 4 -->
+        <h2>4. Как отчитываться перед государством?</h2>
+        <h3>Шаг 1. Загрузите справки с биржи</h3>
+        <p>Все крупные биржи (Bybit, BingX, OKX) предоставляют выписки по счетам. <strong>Сохраняйте все выписки.</strong> Без них вы не сможете подтвердить расходы.</p>
+        <h3>Шаг 2. Заполните декларацию 3-НДФЛ</h3>
+        <p>Код дохода: «03» (доход от продажи имущества). <strong>Срок:</strong> до <strong>30 апреля 2027 года</strong> за доходы 2026 года.</p>
+        <h3>Шаг 3. Уплатите налог</h3>
+        <p><strong>Срок:</strong> до <strong>15 июля 2027 года</strong>. Реквизиты — ваша налоговая инспекция по месту жительства.</p>
+        
+        <!-- 5 -->
+        <h2>5. Можно ли законно не платить налог?</h2>
+        <div class="success-box">
+            <i class="fas fa-clock"></i> <strong>Способ 1. Вы владеете криптой больше 3 лет</strong><br>
+            Если вы купили криптовалюту и держали её больше 3 лет, то при продаже налог платить не нужно.
+        </div>
+        <div class="success-box">
+            <i class="fas fa-chart-line"></i> <strong>Способ 2. Вы продали крипту дешевле, чем купили</strong><br>
+            Нет дохода — нет налога. Но декларацию подать всё равно нужно.
+        </div>
+        
+        <!-- 6 -->
+        <h2>6. Какие схемы лучше обходить стороной</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead><tr><th>Схема</th><th>Почему опасно</th></tr></thead>
+                <tbody>
+                    <tr><td>Продажа крипты за наличные «из рук в руки»</td><td>Нет документов. При проверке не докажете расходы.</td></tr>
+                    <tr><td>Использование обменников без чеков</td><td>Нет подтверждения цены покупки.</td></tr>
+                    <tr><td>Перевод на карту третьего лица</td><td>Банк может заблокировать карту за «обналичку».</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 7 -->
+        <h2>7. Что будет, если не платить?</h2>
+        <div class="warning-box">
+            <i class="fas fa-balance-scale"></i> <strong>Если вы скроете доход до 2,7 млн ₽</strong><br>
+            Штраф: 20–40% от суммы налога + пени за каждый день просрочки.
+        </div>
+        <div class="warning-box">
+            <i class="fas fa-handcuffs"></i> <strong>Если сумма больше или есть признаки умышленного уклонения</strong><br>
+            Штраф до 100 000 ₽, арест счетов. В особо крупных случаях — уголовная ответственность (ст. 198 УК РФ).
+        </div>
+        
+        <!-- 8 -->
+        <h2>8. Как подготовиться к налоговой проверке</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead><tr><th>№</th><th>Действие</th><th>Зачем</th></tr></thead>
+                <tbody>
+                    <tr><td>1</td><td>Сохраните все выписки с бирж</td><td>Подтвердить расходы</td></tr>
+                    <tr><td>2</td><td>Заведите папку «Крипто-налоги»</td><td>Не потерять документы</td></tr>
+                    <tr><td>3</td><td>Проконсультируйтесь с налоговым консультантом</td><td>При сложных сценариях</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 9 -->
+        <h2>9. Частые вопросы</h2>
+        <div class="highlight-box"><strong>❓ Нужно ли платить налог с майнинга?</strong><br>Да. Доход от майнинга облагается НДФЛ.</div>
+        <div class="highlight-box"><strong>❓ Что с налогом при P2P-сделках?</strong><br>P2P — те же сделки купли-продажи. Налог возникает, если продали дороже, чем купили.</div>
+        <div class="highlight-box"><strong>❓ Как налоговая узнает о моих крипто-доходах?</strong><br>С 2024 года биржи передают данные в ФНС по запросу. Банки также могут запрашивать происхождение средств.</div>
+        
+        <!-- 10 -->
+        <h2>10. Чек-лист для новичка</h2>
+        <ul>
+            <li>✅ Сохранять все чеки и выписки с бирж</li>
+            <li>✅ Фиксировать даты и суммы каждой покупки</li>
+            <li>✅ Подавать декларацию 3-НДФЛ до 30 апреля</li>
+            <li>✅ Платить налог до 15 июля</li>
+            <li>✅ Не пытаться «обналичить» крипту в серых схемах</li>
+        </ul>
+        
+        <h2>📌 Вывод</h2>
+        <div class="success-box">
+            <strong>Налоги на криптовалюту в России — это не страшно, если подходить к ним осознанно.</strong><br><br>
+            <strong>Запомните три главных правила:</strong><br>
+            1. Криптовалюта — имущество. Продажа и обмен — это доход.<br>
+            2. Сроки: декларация до 30 апреля, уплата до 15 июля.<br>
+            3. Документы — всё. Без них не подтвердить расходы.
+        </div>
+        
+        <p>Вы уже прочитали эту статью. Значит, вы умнее большинства новичков. Не ленитесь, сохраняйте выписки, вовремя подавайте декларацию — и спите спокойно.</p>
+        
+        <div class="highlight-box">
+            <i class="fas fa-comment"></i> <strong>А теперь честно ответьте себе:</strong> Вы уже платили налоги с крипты? Или только планируете? Какой момент вам кажется самым сложным?
+        </div>
+        
+        <p style="font-size:0.85rem; margin-top:2rem;">⚠️ <em>Эта статья не является налоговой консультацией. За точным расчётом обратитесь к квалифицированному специалисту.</em></p>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О проекте</a>
+            <a href="privacy.html">Политика конфиденциальности</a>
+        </div>
+        <p><i class="far fa-copyright"></i> 2026 CryptoGuide. Информационный портал для новичков. Не является инвестиционной рекомендацией.</p>
+    </div>
+</footer>
+
+<div class="go-top" id="goTopBtn">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+    const goTopBtn = document.getElementById('goTopBtn');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) goTopBtn.classList.add('show');
+        else goTopBtn.classList.remove('show');
+    });
+    goTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
