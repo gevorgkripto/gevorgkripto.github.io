@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Что такое стейкинг и как на нём заработать новичку — гайд 2026</title>
+    <meta name="description" content="Что такое стейкинг криптовалют простыми словами. Как заработать на стейкинге новичку, лучшие монеты, доходность, риски. Пошаговая инструкция по стейкингу на биржах.">
+    <meta name="keywords" content="стейкинг, что такое стейкинг, заработок на криптовалюте, пассивный доход крипта, стейкинг для новичков, стейкинг на бирже">
+    <meta name="author" content="CryptoGuide">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108610444','ym');
+        ym(108610444,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/108610444" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #cfe7f5 0%, #7bb3d4 40%, #2c5a7a 100%);
+            background-attachment: fixed;
+            color: #111827;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+        
+        .header {
+            background: linear-gradient(135deg, #d4f1e3 0%, #cfe7f5 50%, #2c5a7a 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #000000; text-decoration: none; }
+        .logo i { color: #000000; }
+        .nav a {
+            color: #000000;
+            font-weight: 500;
+            margin-left: 28px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .nav a:hover { color: #8B0000; border-bottom: 2px solid #8B0000; padding-bottom: 4px; }
+        
+        .content-card {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(2px);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(139,0,0,0.2);
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            border-left: 4px solid #8B0000;
+            padding-left: 18px;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 1.8rem 0 1rem;
+            color: #8B0000;
+            border-left: 4px solid #8B0000;
+            padding-left: 14px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem;
+            color: #8B0000;
+        }
+        p { margin-bottom: 1rem; line-height: 1.6; }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 1rem;
+            border: 1px solid rgba(139,0,0,0.2);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #f0eef2;
+        }
+        th {
+            background: rgba(139, 0, 0, 0.1);
+            color: #8B0000;
+            font-weight: 700;
+        }
+        
+        .highlight-box {
+            background: rgba(139, 0, 0, 0.05);
+            border-left: 4px solid #8B0000;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        .success-box {
+            background: rgba(34, 139, 34, 0.08);
+            border-left: 4px solid #228B22;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        .warning-box {
+            background: rgba(255, 140, 0, 0.08);
+            border-left: 4px solid #FF8C00;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        .support-box {
+            background: rgba(0, 0, 128, 0.08);
+            border-left: 4px solid #000080;
+            border-radius: 0.8rem;
+            padding: 1.2rem;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        
+        .tools-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+            justify-content: center;
+        }
+        .exchange-btn {
+            display: inline-block;
+            background: #000080;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.2s;
+            text-align: center;
+            min-width: 160px;
+        }
+        .exchange-btn:hover { background: #0000cd; transform: translateY(-2px); }
+        
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .checklist li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        ul, ol { margin: 0.8rem 0 1rem 1.8rem; }
+        li { margin-bottom: 0.3rem; }
+        
+        .go-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #8B0000;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 99;
+        }
+        .go-top.show { opacity: 1; visibility: visible; }
+        
+        .footer {
+            background: rgba(44, 90, 122, 0.95);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-top: 2px solid #8B0000;
+            color: white;
+            font-size: 0.8rem;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a { color: #FFD0D0; text-decoration: none; }
+        
+        @media (max-width: 700px) {
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.3rem; }
+            .content-card { padding: 1.2rem; }
+            .nav a { margin-left: 12px; font-size: 0.75rem; }
+            .exchange-btn { padding: 0.6rem 1rem; font-size: 0.9rem; min-width: 130px; }
+        }
+        .text-burgundy { color: #8B0000; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo"><i class="fab fa-bitcoin"></i> CRYPTO<span style="color:#8B0000;">GUIDE</span> 2026</a>
+        <div class="nav">
+            <a href="index.html">Главная</a>
+            <a href="index.html#methods">Способы</a>
+            <a href="index.html#storage">Хранение</a>
+            <a href="taxes.html">Налоги</a>
+            <a href="withdraw.html">Вывод</a>
+            <a href="analysis.html">Анализ</a>
+            <a href="compare.html">Биржи</a>
+            <a href="defi.html">DeFi</a>
+            <a href="staking.html">Стейкинг</a>
+            <a href="index.html#faq">FAQ</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="content-card">
+        <h1>Что такое стейкинг и как на нём заработать новичку</h1>
+        
+        <div class="highlight-box">
+            <i class="fas fa-lightbulb"></i> <strong>Вы купили биткоин. Или эфир. И они просто лежат на кошельке. Не растут, не падают, просто «спят». А вы смотрите на них и думаете: «А нельзя ли как-то получать с них доход, пока они лежат?» Можно. И называется это стейкинг.</strong>
+        </div>
+        
+        <p>Я сам, когда только начинал, долго не решался. Казалось, что это что-то сложное, для «продвинутых». Но на самом деле стейкинг — это как депозит в банке, только проще и без банка.</p>
+        
+        <p>В этой статье я расскажу простыми словами:</p>
+        <ul>
+            <li>Что такое стейкинг (на пальцах)</li>
+            <li>Как он работает</li>
+            <li>Какие есть варианты стейкинга для новичка</li>
+            <li>Где и как начать</li>
+            <li>Какие риски вас поджидают</li>
+            <li>И главное — <strong>сколько можно заработать</strong></li>
+        </ul>
+        
+        <!-- Блок поддержки -->
+        <div class="support-box">
+            <i class="fas fa-heart" style="color: #000080; font-size: 1.5rem;"></i>
+            <p style="margin-top: 8px;"><strong>❤️ Поддержите развитие CryptoGuide!</strong></p>
+            <p>Если вы решите зарегистрироваться на одной из бирж для стейкинга — переходите по нашим кнопкам. Для вас это бесплатно (а часто даёт бонусы), а мы получаем комиссию на развитие сайта. Спасибо! 🙏</p>
+            <div class="tools-grid">
+                <a href="https://partner.bybit.com/b/PARTNER_ID_БИРЖИ" target="_blank" class="exchange-btn"><i class="fab fa-bitcoin"></i> Bybit →</a>
+                <a href="https://bingx.com/ru/partner/26811928" target="_blank" class="exchange-btn"><i class="fas fa-chart-line"></i> BingX →</a>
+                <a href="https://www.binance.com/ru/partner/J3NX5W" target="_blank" class="exchange-btn"><i class="fab fa-bitcoin"></i> Binance →</a>
+                <a href="https://www.okx.com/ru/join/PARTNER_ID_БИРЖИ" target="_blank" class="exchange-btn"><i class="fas fa-exchange-alt"></i> OKX →</a>
+            </div>
+            <p style="font-size:0.7rem; margin-top:6px;">*Для Bybit и OKX ID пока placeholder — скоро появятся реальные ссылки!</p>
+        </div>
+        
+        <h2>1. Что такое стейкинг простыми словами</h2>
+        <p>Представьте обычный банковский депозит. Вы кладёте деньги на счёт, банк их использует, а вам платит проценты.</p>
+        <p><strong>Стейкинг — это почти то же самое, но без банка.</strong></p>
+        <p>В мире криптовалют есть монеты, которые работают по механизму <strong>Proof-of-Stake</strong> (PoS) — «доказательство доли владения». Владельцы таких монет могут «заблокировать» (застейкать) свои монеты на определённый срок, чтобы поддерживать работу сети. А за это сеть платит им вознаграждение.</p>
+        <div class="success-box">
+            <strong>Простыми словами:</strong> вы даёте свои монеты взаймы сети, сеть использует их для своей работы, а вы получаете проценты. Ваши монеты при этом остаются у вас (просто временно заблокированы).
+        </div>
+        
+        <h2>2. Какие монеты подходят для стейкинга?</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead><tr><th>Монета</th><th>Примерная доходность</th><th>Минимальная сумма</th><th>Сложность</th></tr></thead>
+                <tbody>
+                    <tr><td>Ethereum (ETH)</span></td><td>3–5% годовых</span></td><td>32 ETH (дорого, но есть пулы)</span></td><td>Средняя</span></tr>
+                    <tr><td>Solana (SOL)</span></td><td>6–8% годовых</span></td><td>От 0.01 SOL</span></td><td>Низкая</span></tr>
+                    <tr><td>Cardano (ADA)</span></td><td>3–5% годовых</span></td><td>От 10 ADA</span></td><td>Низкая</span></tr>
+                    <tr><td>Tron (TRX)</span></td><td>4–6% годовых</span></td><td>От 0 TRX</span></td><td>Низкая</span></tr>
+                    <tr><td>BNB (Binance Coin)</span></span></td><td>2–5% годовых</span></td><td>От 0.001 BNB</span></td><td>Низкая</span></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="highlight-box">
+            <i class="fas fa-gem"></i> <strong>Совет для новичка:</strong> начните с Solana, Cardano или Tron — у них низкий порог входа и простой процесс.
+        </div>
+        
+        <h2>3. Как работает стейкинг на практике (три способа)</h2>
+        
+        <h3>Способ 1. Стейкинг на бирже (самый лёгкий для новичка)</h3>
+        <p>Вы просто заходите на биржу (Bybit, Binance, OKX), находите раздел «Стейкинг» или «Заработок», выбираете монету и нажимаете «Застейкать».</p>
+        <div class="success-box">
+            <strong>✅ Плюсы:</strong> очень просто, не нужно разбираться в кошельках, монеты под контролем биржи.<br>
+            <strong>⚠️ Минусы:</strong> доходность чуть ниже, ваши монеты на бирже.
+        </div>
+        
+        <h3>Способ 2. Стейкинг через официальный кошелёк</h3>
+        <p>Вы переводите монеты в официальный кошелёк сети (например, Solana — Phantom) и стейкаете их там.</p>
+        <div class="success-box">
+            <strong>✅ Плюсы:</strong> максимальная доходность, полный контроль над монетами.<br>
+            <strong>⚠️ Минусы:</strong> нужно разбираться в кошельках.
+        </div>
+        
+        <h3>Способ 3. Стейкинг через DeFi</h3>
+        <p>Вы идёте на сайт вроде Lido или AAVE и стейкаете монеты там. Самый доходный, но и самый сложный вариант.</p>
+        <div class="warning-box">
+            <strong>Для новичка:</strong> пока пропустите. Начните с биржи.
+        </div>
+        
+        <h2>4. Пошаговая инструкция: как застейкать на бирже</h2>
+        <div class="highlight-box">
+            <i class="fas fa-list-ol"></i> <strong>Шаг 1.</strong> Зайдите в раздел «Стейкинг» или «Заработок».<br>
+            <strong>Шаг 2.</strong> Выберите монету (например, Solana).<br>
+            <strong>Шаг 3.</strong> Введите сумму и срок.<br>
+            <strong>Шаг 4.</strong> Подтвердите и получайте проценты.
+        </div>
+        
+        <h2>5. Сколько можно заработать? Реалистичные цифры</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead><tr><th>Вариант</th><th>Сумма</th><th>Доходность</th><th>Доход в год</th></tr></thead>
+                <tbody>
+                    <tr><td>USDT (гибкий)</span></td><td>1000 USDT</span></td><td>5%</span></td><td>50 USDT</span></tr>
+                    <tr><td>Solana</span></td><td>10 SOL (~500$)</span></td><td>7%</span></td><td>0.7 SOL (~35$)</span></tr>
+                    <tr><td>Ethereum (пул)</span></td><td>0.1 ETH (~300$)</span></td><td>4%</span></td><td>0.004 ETH (~12$)</span></tr>
+                </tbody>
+            </table>
+        </div>
+        <p><strong>Честно:</strong> на маленьких суммах доход будет небольшим. Но это пассивный доход, который не требует от вас ничего.</p>
+        
+        <h2>6. Риски стейкинга (о чём молчат гуру)</h2>
+        <div class="warning-box">
+            <strong>⚠️ Риск 1. Курсовой риск</strong><br>
+            Цена монеты может упасть. Вы получите проценты в монетах, но в долларах можете потерять.<br>
+            <strong>Как снизить риск:</strong> стейкайте стейблкоины (USDT) или монеты, в которые верите.
+        </div>
+        <div class="warning-box">
+            <strong>⚠️ Риск 2. Заморозка монет</strong><br>
+            При стейкинге на срок монеты блокируются. Не продать, даже если рынок рухнет.<br>
+            <strong>Как снизить риск:</strong> выбирайте «гибкий» стейкинг.
+        </div>
+        <div class="warning-box">
+            <strong>⚠️ Риск 3. Биржа может заблокировать вывод</strong><br>
+            Бывает редко, но бывает.<br>
+            <strong>Как снизить риск:</strong> стейкайте только на надёжных биржах (Bybit, Binance, OKX).
+        </div>
+        
+        <h2>7. Частые вопросы</h2>
+        <div class="highlight-box"><strong>❓ Что лучше: стейкинг или просто держать монеты?</strong><br>Если вы верите в монету и планируете держать её долго — стейкинг даст дополнительный доход.</div>
+        <div class="highlight-box"><strong>❓ Нужно ли платить налоги с дохода от стейкинга?</strong><br>Да. Доход от стейкинга — налогооблагаемый. Сохраняйте все отчёты.</div>
+        <div class="highlight-box"><strong>❓ А можно потерять сами монеты?</strong><br>При стейкинге на надёжных биржах — практически нет. Биржа возвращает ваши монеты в любом случае.</div>
+        
+        <h2>8. Чек-лист для новичка перед стейкингом</h2>
+        <ul class="checklist">
+            <li>Я выбрал надёжную биржу (Bybit, Binance, OKX)</li>
+            <li>Я понимаю, на какой срок блокируются мои монеты</li>
+            <li>Я готов к тому, что курс может измениться</li>
+            <li>Я начинаю с небольшой суммы (10–50 USDT)</li>
+            <li>Я сохранил все документы и выписки для налоговой</li>
+        </ul>
+        
+        <h2>📌 Вывод</h2>
+        <div class="success-box">
+            <strong>Стейкинг — это лучший способ заставить криптовалюту работать на вас.</strong><br><br>
+            <strong>Запомните главное:</strong><br>
+            1. Начинайте с малого — 10–50 USDT достаточно, чтобы понять процесс.<br>
+            2. Выбирайте надёжную биржу — Bybit, Binance, OKX.<br>
+            3. Стейкайте стейблкоины или монеты, в которые верите.<br>
+            4. Не вкладывайте последние деньги — стейкинг для свободных средств.<br>
+            5. Сохраняйте отчёты — налоговая может спросить.
+        </div>
+        
+        <p>Вы уже прочитали эту статью. Значит, вы умнее большинства новичков. Стейкинг — это не страшно. Это просто, выгодно и интересно.</p>
+        
+        <!-- Ещё блок с кнопками -->
+        <div class="support-box">
+            <i class="fas fa-hand-holding-heart" style="color: #000080; font-size: 1.5rem;"></i>
+            <p style="margin-top: 8px;"><strong>❤️ Начните зарабатывать на стейкинге уже сегодня!</strong></p>
+            <div class="tools-grid">
+                <a href="https://partner.bybit.com/b/PARTNER_ID_БИРЖИ" target="_blank" class="exchange-btn"><i class="fab fa-bitcoin"></i> Bybit — бонус $5000</a>
+                <a href="https://bingx.com/ru/partner/26811928" target="_blank" class="exchange-btn"><i class="fas fa-chart-line"></i> BingX — скидка на комиссию</a>
+                <a href="https://www.binance.com/ru/partner/J3NX5W" target="_blank" class="exchange-btn"><i class="fab fa-bitcoin"></i> Binance — бонус на старт</a>
+                <a href="https://www.okx.com/ru/join/PARTNER_ID_БИРЖИ" target="_blank" class="exchange-btn"><i class="fas fa-exchange-alt"></i> OKX — бонус на старт</a>
+            </div>
+        </div>
+        
+        <div class="highlight-box">
+            <i class="fas fa-comment"></i> <strong>А теперь честно ответьте себе:</strong> Вы уже пробовали стейкинг? Или только присматриваетесь? Что вас останавливает?
+        </div>
+        
+        <p style="font-size:0.85rem; margin-top:2rem;">⚠️ <em>Эта статья носит информационный характер и не является инвестиционной рекомендацией. Все операции с криптовалютами связаны с риском.</em></p>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О проекте</a>
+            <a href="privacy.html">Политика конфиденциальности</a>
+        </div>
+        <p><i class="far fa-copyright"></i> 2026 CryptoGuide. Информационный портал для новичков.</p>
+    </div>
+</footer>
+
+<div class="go-top" id="goTopBtn">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+    const goTopBtn = document.getElementById('goTopBtn');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) goTopBtn.classList.add('show');
+        else goTopBtn.classList.remove('show');
+    });
+    goTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
