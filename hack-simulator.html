@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Симуляция взлома: как хакеры крадут криптовалюту и как защититься</title>
+    <meta name="description" content="Реальные схемы взлома криптовалюты: фишинг, фейковая поддержка, подменённые адреса. Как хакеры крадут монеты и как от них защититься новичку.">
+    <meta name="keywords" content="взлом криптовалюты, как крадут крипту, фишинг крипта, безопасность криптокошелька, мошенники крипта">
+    <meta name="author" content="CryptoGuide">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108610444','ym');
+        ym(108610444,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/108610444" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #cfe7f5 0%, #7bb3d4 40%, #2c5a7a 100%);
+            background-attachment: fixed;
+            color: #111827;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+        
+        .header {
+            background: linear-gradient(135deg, #d4f1e3 0%, #cfe7f5 50%, #2c5a7a 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #000000; text-decoration: none; }
+        .logo i { color: #000000; }
+        .nav a {
+            color: #000000;
+            font-weight: 500;
+            margin-left: 28px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .nav a:hover { color: #8B0000; border-bottom: 2px solid #8B0000; padding-bottom: 4px; }
+        
+        .content-card {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(2px);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(139,0,0,0.2);
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            border-left: 4px solid #8B0000;
+            padding-left: 18px;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 1.8rem 0 1rem;
+            color: #8B0000;
+            border-left: 4px solid #8B0000;
+            padding-left: 14px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem;
+            color: #8B0000;
+        }
+        p { margin-bottom: 1rem; line-height: 1.6; }
+        
+        .highlight-box {
+            background: rgba(139, 0, 0, 0.05);
+            border-left: 4px solid #8B0000;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        .success-box {
+            background: rgba(34, 139, 34, 0.08);
+            border-left: 4px solid #228B22;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        .warning-box {
+            background: rgba(255, 140, 0, 0.08);
+            border-left: 4px solid #FF8C00;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        
+        .scheme-box {
+            background: rgba(139, 0, 0, 0.03);
+            border-radius: 1rem;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+            border: 1px solid rgba(139,0,0,0.15);
+        }
+        .scheme-box strong { color: #8B0000; }
+        
+        .related-articles {
+            background: rgba(139, 0, 0, 0.05);
+            border-radius: 1.2rem;
+            padding: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+        .related-articles h3 { margin-top: 0; margin-bottom: 1rem; }
+        .related-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: flex-start;
+        }
+        .related-link {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            color: #8B0000;
+            font-weight: 500;
+            font-size: 0.85rem;
+            border: 1px solid #8B0000;
+            transition: 0.2s;
+        }
+        .related-link:hover { background: #8B0000; color: white; }
+        
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .checklist li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        ul, ol { margin: 0.8rem 0 1rem 1.8rem; }
+        li { margin-bottom: 0.3rem; }
+        
+        .go-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #8B0000;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 99;
+        }
+        .go-top.show { opacity: 1; visibility: visible; }
+        
+        .footer {
+            background: rgba(44, 90, 122, 0.95);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-top: 2px solid #8B0000;
+            color: white;
+            font-size: 0.8rem;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a { color: #FFD0D0; text-decoration: none; }
+        
+        @media (max-width: 700px) {
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.3rem; }
+            .content-card { padding: 1.2rem; }
+            .nav a { margin-left: 12px; font-size: 0.75rem; }
+            .related-grid { flex-direction: column; }
+            .related-link { text-align: center; }
+        }
+        .text-burgundy { color: #8B0000; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo"><i class="fab fa-bitcoin"></i> CRYPTO<span style="color:#8B0000;">GUIDE</span> 2026</a>
+        <div class="nav">
+            <a href="index.html">Главная</a>
+            <a href="index.html#methods">Способы</a>
+            <a href="index.html#storage">Хранение</a>
+            <a href="taxes.html">Налоги</a>
+            <a href="withdraw.html">Вывод</a>
+            <a href="analysis.html">Анализ</a>
+            <a href="compare.html">Биржи</a>
+            <a href="defi.html">DeFi</a>
+            <a href="staking.html">Стейкинг</a>
+            <a href="mistakes.html">Ошибки</a>
+            <a href="wallets.html">Кошельки</a>
+            <a href="airdrops.html">Аирдропы</a>
+            <a href="dca.html">DCA</a>
+            <a href="security.html">Безопасность</a>
+            <a href="hack-simulator.html">Взлом</a>
+            <a href="index.html#faq">FAQ</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="content-card">
+        <h1>Симуляция взлома: как хакеры крадут криптовалюту и как от них защититься</h1>
+        
+        <div class="highlight-box">
+            <i class="fas fa-skull-crosswalk"></i> <strong>Вы думаете, что вашу криптовалюту украдут сложным взломом с кодом из фильмов? Группа хакеров в масках будет подбирать пароль к вашему кошельку? Нет. В реальности всё гораздо проще и страшнее.</strong>
+        </div>
+        
+        <p>В 2026 году 90% краж случаются через невнимательность самого владельца. Вы сами отдаёте ключи мошенникам, сами подписываете опасные транзакции, сами переходите по ссылкам.</p>
+        
+        <p>В этой статье — <strong>реальные схемы взлома</strong>, которые используют хакеры. И главное — как от них защититься, чтобы не стать жертвой.</p>
+        
+        <!-- 1 -->
+        <div class="scheme-box">
+            <strong>1. Фишинг: копия сайта, которую вы не отличите</strong><br>
+            Хакеры создают точную копию сайта биржи или кошелька. Вы переходите по ссылке, вводите логин, пароль — и всё крадут.<br>
+            <strong>✅ Как защититься:</strong> всегда проверяйте адрес сайта (bybit.com, а не byb1t.com). Не переходите по ссылкам из писем и сообщений. Добавьте официальные сайты в закладки.
+        </div>
+        
+        <!-- 2 -->
+        <div class="scheme-box">
+            <strong>2. Поддельная служба поддержки в Telegram</strong><br>
+            Вам пишет «админ» биржи, говорит, что аккаунт заблокирован, и просит перевести деньги на «безопасный кошелёк».<br>
+            <strong>✅ Как защититься:</strong> официальная поддержка никогда не пишет первой. Не доверяйте никому, кто просит seed-фразу или перевод.
+        </div>
+        
+        <!-- 3 -->
+        <div class="scheme-box">
+            <strong>3. Фейковый airdrop: «бесплатные монеты, подключите кошелёк»</strong><br>
+            Обещают раздачу токенов. Просят «подключить кошелёк» на сайте. Вы нажимаете «Confirm» — и с кошелька уходят все монеты.<br>
+            <strong>✅ Как защититься:</strong> используйте отдельный кошелёк для аирдропов. Не подписывайте транзакции, если не понимаете, что происходит.
+        </div>
+        
+        <!-- 4 -->
+        <div class="scheme-box">
+            <strong>4. Скамы «удвоение BTC» и «раздача эфира»</strong><br>
+            «Отправьте 1 BTC на адрес, и мы вернём 2 BTC!» Звучит как бред, но новички до сих пор ведутся.<br>
+            <strong>✅ Как защититься:</strong> никто не будет удваивать деньги просто так. Игнорируйте любые «гарантированные» раздачи.
+        </div>
+        
+        <!-- 5 -->
+        <div class="scheme-box">
+            <strong>5. Взлом через вашу электронную почту</strong><br>
+            Мошенники взламывают почту, сбрасывают пароль от биржи, выводят ваши монеты.<br>
+            <strong>✅ Как защититься:</strong> включите 2FA на почте. Не используйте один пароль для почты и биржи. Установите сложный пароль.
+        </div>
+        
+        <!-- 6 -->
+        <div class="scheme-box">
+            <strong>6. Поддельное приложение в магазине приложений</strong><br>
+            В Google Play или App Store могут попасть фейковые приложения под видом Trust Wallet, MetaMask или Bybit.<br>
+            <strong>✅ Как защититься:</strong> скачивайте приложения только с официальных сайтов. Проверяйте разработчика и количество скачиваний.
+        </div>
+        
+        <!-- 7 -->
+        <div class="scheme-box">
+            <strong>7. Тактика поддержки с удалённым доступом</strong><br>
+            Мошенник представляется сотрудником техподдержки, просит установить TeamViewer или AnyDesk «для диагностики».<br>
+            <strong>✅ Как защититься:</strong> никогда не давайте удалённый доступ под видом поддержки. Официальные сотрудники не просят установку TeamViewer.
+        </div>
+        
+        <!-- 8 -->
+        <div class="scheme-box">
+            <strong>8. Взлом через посев крипты в соло-кошелёк</strong><br>
+            Мошенники отправляют мелкие суммы с надеждой, что вы перейдёте по их ссылке «проверить транзакцию».<br>
+            <strong>✅ Как защититься:</strong> игнорируйте мелкие переводы с неизвестных кошельков. Не переходите по ссылкам из подозрительных транзакций.
+        </div>
+        
+        <!-- 9 -->
+        <div class="scheme-box">
+            <strong>9. Перевод на подменённый адрес (адресная атака)</strong><br>
+            Бот отслеживает транзакции и подменяет адрес в буфере обмена на адрес злоумышленника.<br>
+            <strong>✅ Как защититься:</strong> всегда проверяйте первые и последние 5 символов адреса. Отправляйте тестовую транзакцию перед крупным переводом.
+        </div>
+        
+        <!-- 10 -->
+        <div class="scheme-box">
+            <strong>10. Схема мятого кошелька (потеря seed-фразы)</strong><br>
+            Человек теряет телефон, где хранилась seed-фраза в заметках. Или делает скриншот — и облако синхронизирует его.<br>
+            <strong>✅ Как защититься:</strong> seed-фраза только на бумаге, в сейфе. Не фотографируйте и не храните seed-фразу в облаке.
+        </div>
+        
+        <h2>🎁 Бонус: что делать, если вас уже взломали</h2>
+        <ol>
+            <li>Переведите оставшиеся деньги на новый кошелёк (срочно!).</li>
+            <li>Смените пароли на всех сервисах.</li>
+            <li>Напишите в поддержку биржи — могут заблокировать вывод.</li>
+            <li>Подайте заявление в полицию (шанс невысокий, но есть).</li>
+        </ol>
+        
+        <h2>📋 Чек-лист: проверьте себя</h2>
+        <ul class="checklist">
+            <li>Я не перехожу по ссылкам из писем и сообщений, а захожу на сайт через закладки</li>
+            <li>Для аирдропов и подозрительных сайтов использую отдельный кошелёк</li>
+            <li>Включил 2FA на бирже и на почте</li>
+            <li>Скачиваю приложения только с официальных сайтов</li>
+            <li>Не даю удалённый доступ через TeamViewer / AnyDesk</li>
+            <li>Проверяю адрес перед каждым переводом (первые и последние символы)</li>
+            <li>Seed-фраза на бумаге, а не в телефоне</li>
+        </ul>
+        
+        <h2>📌 Вывод</h2>
+        <div class="success-box">
+            <strong>Главная уязвимость — не технологии, а вы сами.</strong><br><br>
+            Мошенники не взламывают блокчейн. Они взламывают вашу невнимательность, доверчивость и лень, чтобы «сделать быстро». Но это лечится. Вы уже прочитали эту статью — значит, теперь обмануть вас будет сложнее.
+        </div>
+        
+        <div class="highlight-box">
+            <i class="fas fa-comment"></i> <strong>А теперь честно ответьте себе:</strong> Против какой из этих схем вы защищены лучше всего? А против какой — пока не защищены совсем?
+        </div>
+        
+        <!-- Внутренние ссылки -->
+        <div class="related-articles">
+            <h3><i class="fas fa-link"></i> Полезные статьи по теме</h3>
+            <div class="related-grid">
+                <a href="security.html" class="related-link">🔒 10 правил безопасности</a>
+                <a href="wallets.html" class="related-link">👛 Топ-5 криптокошельков</a>
+                <a href="mistakes.html" class="related-link">⚠️ Ошибки новичков</a>
+                <a href="analysis.html" class="related-link">📊 Как анализировать криптовалюты</a>
+                <a href="index.html" class="related-link">🏠 Как купить криптовалюту</a>
+            </div>
+        </div>
+        
+        <p style="font-size:0.85rem; margin-top:2rem;">⚠️ <em>Эта статья носит информационный характер и не является инвестиционной рекомендацией. Все операции с криптовалютами связаны с риском.</em></p>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О проекте</a>
+            <a href="privacy.html">Политика конфиденциальности</a>
+        </div>
+        <p><i class="far fa-copyright"></i> 2026 CryptoGuide. Информационный портал для новичков.</p>
+    </div>
+</footer>
+
+<div class="go-top" id="goTopBtn">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+    const goTopBtn = document.getElementById('goTopBtn');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) goTopBtn.classList.add('show');
+        else goTopBtn.classList.remove('show');
+    });
+    goTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
