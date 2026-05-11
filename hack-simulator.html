@@ -396,5 +396,33 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
+    <script>
+    // Скрипт №1: кнопка «Наверх»
+    const goTopBtn = document.getElementById('goTopBtn');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) goTopBtn.classList.add('show');
+        else goTopBtn.classList.remove('show');
+    });
+    goTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+
+<script>
+    // Скрипт №2: отслеживание прокрутки до конца статьи
+    document.addEventListener('DOMContentLoaded', function() {
+        let scrollTriggered = false;
+        window.addEventListener('scroll', function() {
+            let scrollHeight = document.documentElement.scrollHeight;
+            let clientHeight = document.documentElement.clientHeight;
+            let scrolled = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+            if (!scrollTriggered && scrolled > (scrollHeight - clientHeight) * 0.9) {
+                scrollTriggered = true;
+                ym(108610444, 'reachGoal', 'scroll_90');
+                console.log('Цель "Дочитал статью" достигнута!');
+            }
+        });
+    });
+</script>
 </body>
 </html>
