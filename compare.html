@@ -420,5 +420,20 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    let scrollTriggered = false;
+    window.addEventListener('scroll', function() {
+        let scrollHeight = document.documentElement.scrollHeight;
+        let clientHeight = document.documentElement.clientHeight;
+        let scrolled = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+        if (!scrollTriggered && scrolled > (scrollHeight - clientHeight) * 0.9) {
+            scrollTriggered = true;
+            ym(108610444, 'reachGoal', 'scroll_90');
+            console.log('Цель "Дочитал статью" достигнута!'); // Для проверки
+        }
+    });
+});
+</script>
 </body>
 </html>
