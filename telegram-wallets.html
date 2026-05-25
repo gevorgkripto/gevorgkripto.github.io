@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Крипто‑кошельки для Telegram: Tonkeeper, Wallet в TG — удобно, но безопасно ли?</title>
+    <meta name="description" content="Обзор криптокошельков для Telegram: Wallet в TG (кастодиальный) и Tonkeeper (некастодиальный). Плюсы, минусы, риски, сравнение и пошаговая инструкция для новичков.">
+    <meta name="keywords" content="кошелек телеграм, Tonkeeper, Wallet в Telegram, TON кошелек, криптокошелек для Telegram, безопасность крипты">
+    <meta name="author" content="CryptoGuide">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=108610444','ym');
+        ym(108610444,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:"dataLayer",referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/108610444" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(145deg, #cfe7f5 0%, #7bb3d4 40%, #2c5a7a 100%);
+            background-attachment: fixed;
+            color: #111827;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+        
+        .header {
+            background: linear-gradient(135deg, #d4f1e3 0%, #cfe7f5 50%, #2c5a7a 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .logo { font-size: 1.5rem; font-weight: 700; color: #000000; text-decoration: none; }
+        .logo i { color: #000000; }
+        .nav a {
+            color: #000000;
+            font-weight: 500;
+            margin-left: 28px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .nav a:hover { color: #8B0000; border-bottom: 2px solid #8B0000; padding-bottom: 4px; }
+        
+        .content-card {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(2px);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(139,0,0,0.2);
+            box-shadow: 0 12px 24px -12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #8B0000, #A52A2A);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            border-left: 4px solid #8B0000;
+            padding-left: 18px;
+        }
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 1.8rem 0 1rem;
+            color: #8B0000;
+            border-left: 4px solid #8B0000;
+            padding-left: 14px;
+        }
+        h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem;
+            color: #8B0000;
+        }
+        p { margin-bottom: 1rem; line-height: 1.6; }
+        
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 1rem;
+            border: 1px solid rgba(139,0,0,0.2);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid #f0eef2;
+        }
+        th {
+            background: rgba(139, 0, 0, 0.1);
+            color: #8B0000;
+            font-weight: 700;
+        }
+        
+        .highlight-box {
+            background: rgba(139, 0, 0, 0.05);
+            border-left: 4px solid #8B0000;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        .success-box {
+            background: rgba(34, 139, 34, 0.08);
+            border-left: 4px solid #228B22;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        .warning-box {
+            background: rgba(255, 140, 0, 0.08);
+            border-left: 4px solid #FF8C00;
+            border-radius: 0.8rem;
+            padding: 1rem 1.2rem;
+            margin: 1.2rem 0;
+        }
+        
+        .related-articles {
+            background: rgba(139, 0, 0, 0.05);
+            border-radius: 1.2rem;
+            padding: 1.5rem;
+            margin: 2rem 0 1rem;
+        }
+        .related-articles h3 { margin-top: 0; margin-bottom: 1rem; }
+        .related-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: flex-start;
+        }
+        .related-link {
+            background: white;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            color: #8B0000;
+            font-weight: 500;
+            font-size: 0.85rem;
+            border: 1px solid #8B0000;
+            transition: 0.2s;
+        }
+        .related-link:hover { background: #8B0000; color: white; }
+        
+        .checklist {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .checklist li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+        
+        ul, ol { margin: 0.8rem 0 1rem 1.8rem; }
+        li { margin-bottom: 0.3rem; }
+        
+        .go-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #8B0000;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 99;
+        }
+        .go-top.show { opacity: 1; visibility: visible; }
+        
+        .footer {
+            background: rgba(44, 90, 122, 0.95);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-top: 2px solid #8B0000;
+            color: white;
+            font-size: 0.8rem;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 0.8rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a { color: #FFD0D0; text-decoration: none; }
+        
+        @media (max-width: 700px) {
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.3rem; }
+            .content-card { padding: 1.2rem; }
+            .nav a { margin-left: 12px; font-size: 0.75rem; }
+            .related-grid { flex-direction: column; }
+            .related-link { text-align: center; }
+        }
+        .text-burgundy { color: #8B0000; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a href="index.html" class="logo"><i class="fab fa-bitcoin"></i> CRYPTO<span style="color:#8B0000;">GUIDE</span> 2026</a>
+        <div class="nav">
+            <a href="index.html">Главная</a>
+            <a href="index.html#methods">Способы</a>
+            <a href="index.html#storage">Хранение</a>
+            <a href="taxes.html">Налоги</a>
+            <a href="withdraw.html">Вывод</a>
+            <a href="analysis.html">Анализ</a>
+            <a href="compare.html">Биржи</a>
+            <a href="defi.html">DeFi</a>
+            <a href="staking.html">Стейкинг</a>
+            <a href="mistakes.html">Ошибки</a>
+            <a href="wallets.html">Кошельки</a>
+            <a href="airdrops.html">Аирдропы</a>
+            <a href="dca.html">DCA</a>
+            <a href="security.html">Безопасность</a>
+            <a href="hack-simulator.html">Взлом</a>
+            <a href="earn100.html">Заработок</a>
+            <a href="altcoins.html">Альткоины</a>
+            <a href="nft.html">NFT</a>
+            <a href="scam-check.html">Проверка</a>
+            <a href="technical-analysis.html">Графики</a>
+            <a href="telegram-wallets.html">TG Кошельки</a>
+            <a href="index.html#faq">FAQ</a>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="content-card">
+        <h1>Крипто‑кошельки для Telegram: Tonkeeper, Wallet в TG — удобно, но безопасно ли?</h1>
+        
+        <div class="highlight-box">
+            <i class="fab fa-telegram"></i> <strong>Telegram давно перестал быть просто мессенджером. В 2026 году внутри Telegram можно покупать, хранить и отправлять криптовалюту, не выходя из приложения. Но безопасно ли хранить деньги там, где вы общаетесь с друзьями и подписываетесь на каналы?</strong>
+        </div>
+        
+        <p>Я разобрался. В этой статье — честный обзор двух главных крипто‑кошельков для Telegram, их плюсы, минусы, риски и пошаговая инструкция для новичка.</p>
+        
+        <h2>1. Что такое экосистема TON и почему она внутри Telegram</h2>
+        <p><strong>TON (The Open Network)</strong> — блокчейн, изначально созданный командой Telegram, а теперь развиваемый независимым сообществом. Главная фишка TON — глубокая интеграция с мессенджером Telegram.</p>
+        <p>Благодаря этой интеграции появились:</p>
+        <ul>
+            <li><strong>Wallet в Telegram</strong> — встроенный кошелёк прямо в настройках мессенджера.</li>
+            <li><strong>Tonkeeper</strong> — отдельное приложение для смартфона, которое идеально «дружит» с Telegram.</li>
+        </ul>
+        
+        <h2>2. Wallet в Telegram: что это и как пользоваться</h2>
+        <p><strong>Что это:</strong> официальный встроенный кошелёк в меню Telegram (Настройки → Wallet).</p>
+        <p><strong>Как начать пользоваться:</strong></p>
+        <ol>
+            <li>Откройте Telegram → Настройки → Wallet.</li>
+            <li>Пройдите простую верификацию.</li>
+            <li>Кошелёк активирован.</li>
+        </ol>
+        <div class="success-box">
+            <strong>✅ Плюсы:</strong> максимальное удобство, простой вход, быстрые переводы, поддержка TON и USDT.
+        </div>
+        <div class="warning-box">
+            <strong>❌ Минусы и риски:</strong> кастодиальный кошелёк (ключи не у вас), риск блокировки аккаунта Telegram, лучше не держать крупные суммы, требуется верификация.
+        </div>
+        
+        <h2>3. Tonkeeper: настоящий криптокошелёк для TON</h2>
+        <p><strong>Что это:</strong> некастодиальное мобильное приложение для блокчейна TON.</p>
+        <p><strong>Как начать пользоваться:</strong></p>
+        <ol>
+            <li>Скачайте Tonkeeper из App Store или Google Play.</li>
+            <li>Создайте кошелёк и запишите seed‑фразу <strong>на бумагу</strong>.</li>
+            <li>Пополните кошелёк.</li>
+        </ol>
+        <div class="success-box">
+            <strong>✅ Плюсы:</strong> некастодиальный, без верификации, поддержка TON/USDT/jettons, интеграция с Telegram, стейкинг.
+        </div>
+        <div class="warning-box">
+            <strong>❌ Минусы:</strong> сложнее для новичка, ответственность за ключи, только мобильное приложение.
+        </div>
+        
+        <h2>4. Сравнение: Wallet в TG vs Tonkeeper</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead><tr><th>Параметр</th><th>Wallet в Telegram</th><th>Tonkeeper</th></tr></thead>
+                <tbody>
+                    <tr><td>Тип кошелька</span><td>Кастодиальный</span><td>Некастодиальный</span></tr>
+                    <tr><td>Верификация</span><td>Нужна</span><td>Не нужна</span></tr>
+                    <tr><td>Seed‑фраза</span><td>Не требуется</span><td>Обязательна</span></tr>
+                    <tr><td>Стейкинг</span><td>Нет</span><td>Да</span></tr>
+                    <tr><td>Удобство для новичка</span><td>⭐⭐⭐⭐⭐</span><td>⭐⭐⭐</span></tr>
+                    <tr><td>Безопасность для крупных сумм</span><td>⭐⭐</span><td>⭐⭐⭐⭐</span></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h2>5. Для каких сумм подходит каждый кошелёк</h2>
+        <div class="table-wrapper">
+            </table>
+                <thead><tr><th>Сумма</th><th>Какой кошелёк выбрать</th><th>Почему</th></tr></thead>
+                <tbody>
+                    <tr><td>До 100$</span><td>Wallet в Telegram</span><td>Удобно, быстро, без seed‑фразы</span></tr>
+                    <tr><td>100–1000$</span><td>Tonkeeper (или Wallet, если критично удобство)</span><td>Уже стоит задуматься о контроле ключей</span></tr>
+                    <tr><td>От 1000$ и выше</span><td>Tonkeeper</span><td>Не храните крупные суммы в кастодиальном кошельке</span></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h2>6. Как безопасно пользоваться кошельками в Telegram</h2>
+        <ul>
+            <li>Не храните крупные суммы (особенно в Wallet).</li>
+            <li>Включите облачный пароль в Telegram.</li>
+            <li>Никому не сообщайте seed‑фразу (для Tonkeeper).</li>
+            <li>Не переходите по ссылкам от «поддержки».</li>
+            <li>Запишите seed‑фразу на бумаге и уберите в сейф.</li>
+        </ul>
+        
+        <h2>7. Пошаговая инструкция: перевод из Tonkeeper в Telegram</h2>
+        <ol>
+            <li>Откройте Tonkeeper → выберите монету.</li>
+            <li>Нажмите «Отправить».</li>
+            <li>В поле «Получатель» введите username контакта в Telegram (например, @durov).</li>
+            <li>Укажите сумму → подтвердите.</li>
+        </ol>
+        
+        <h2>8. Частые вопросы</h2>
+        <div class="highlight-box"><strong>❓ Можно ли потерять деньги в Wallet в Telegram, если взломают аккаунт?</strong><br>Да. Обязательно включите облачный пароль и 2FA.</div>
+        <div class="highlight-box"><strong>❓ Что будет, если я удалю Telegram?</strong><br>Если не сохранили seed‑фразу — доступ может быть потерян. Восстановление через поддержку Wallet долгое и не всегда успешное.</div>
+        <div class="highlight-box"><strong>❓ Нужно ли платить налоги с переводов в Telegram?</strong><br>Любой доход от криптовалюты облагается налогом. Сохраняйте чеки.</div>
+        
+        <h2>9. Чек-лист для новичка</h2>
+        <ul class="checklist">
+            <li>Я понимаю разницу между кастодиальным и некастодиальным кошельком</li>
+            <li>Для крупных сумм (от 1000$) я выбрал Tonkeeper</li>
+            <li>Я записал seed‑фразу от Tonkeeper на бумаге и спрятал её</li>
+            <li>Я включил облачный пароль в Telegram</li>
+            <li>Я никогда не сообщаю seed‑фразу и коды подтверждения третьим лицам</li>
+        </ul>
+        
+        <h2>📌 Вывод</h2>
+        <div class="success-box">
+            <strong>Wallet в Telegram подходит для мелких платежей и повседневных переводов. Tonkeeper — настоящий децентрализованный кошелёк для тех, кто хочет контролировать свои деньги.</strong><br><br>
+            <strong>Мой совет новичку:</strong> используйте Tonkeeper для основного хранения. А Wallet в Telegram — как «карманные деньги» для быстрых переводов.
+        </div>
+        
+        <div class="highlight-box">
+            <i class="fas fa-comment"></i> <strong>А теперь честно ответьте себе:</strong> Какой кошелёк вы выберете для повседневных переводов? А для хранения сбережений?
+        </div>
+        
+        <!-- Внутренние ссылки на другие статьи -->
+        <div class="related-articles">
+            <h3><i class="fas fa-link"></i> Полезные статьи по теме</h3>
+            <div class="related-grid">
+                <a href="wallets.html" class="related-link">👛 Топ‑5 криптокошельков 2026</a>
+                <a href="security.html" class="related-link">🔒 10 правил безопасности</a>
+                <a href="hack-simulator.html" class="related-link">⚠️ Симуляция взлома</a>
+                <a href="scam-check.html" class="related-link">🔍 Как не попасть на скам</a>
+                <a href="technical-analysis.html" class="related-link">📈 Технический анализ для начинающих</a>
+                <a href="staking.html" class="related-link">💰 Что такое стейкинг</a>
+            </div>
+        </div>
+        
+        <p style="font-size:0.85rem; margin-top:2rem;">⚠️ <em>Эта статья носит информационный характер и не является инвестиционной рекомендацией. Все операции с криптовалютами связаны с риском.</em></p>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О проекте</a>
+            <a href="privacy.html">Политика конфиденциальности</a>
+        </div>
+        <p><i class="far fa-copyright"></i> 2026 CryptoGuide. Информационный портал для новичков.</p>
+    </div>
+</footer>
+
+<div class="go-top" id="goTopBtn">
+    <i class="fas fa-arrow-up"></i>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let scrollTriggered = false;
+        window.addEventListener('scroll', function() {
+            let scrollHeight = document.documentElement.scrollHeight;
+            let clientHeight = document.documentElement.clientHeight;
+            let scrolled = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+            if (!scrollTriggered && scrolled > (scrollHeight - clientHeight) * 0.9) {
+                scrollTriggered = true;
+                if (typeof ym !== 'undefined') {
+                    ym(108610444, 'reachGoal', 'scroll_90');
+                }
+                console.log('Цель "Дочитал статью" достигнута!');
+            }
+        });
+    });
+    
+    const goTopBtn = document.getElementById('goTopBtn');
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) goTopBtn.classList.add('show');
+        else goTopBtn.classList.remove('show');
+    });
+    goTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
