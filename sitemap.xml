@@ -113,6 +113,37 @@
         <loc>https://gevorgkripto.github.io/crypto-arbitrage.html</loc>
         <lastmod>2026-05-31</lastmod>
         <priority>0.80</priority>
-    </url>
+    </url
+        <!-- НОВЫЕ СТАТЬИ (ИЮНЬ 2026) -->
+<url>
+    <loc>https://gevorgkripto.github.io/altcoins-vs-memecoins.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://gevorgkripto.github.io/crypto-news-fud.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://gevorgkripto.github.io/metaverse.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://gevorgkripto.github.io/crypto-vs-forex.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://gevorgkripto.github.io/bitcoin-million.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+</url>
+<url>
+    <loc>https://gevorgkripto.github.io/ethereum-guide.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <priority>0.80</priority>
+</url>
 
 </urlset>
